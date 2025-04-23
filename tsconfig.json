@@ -16,7 +16,13 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ESNext",
+    "lib": ["dom", "es2015", "es2017"],
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "@store": ["src/app/store/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
