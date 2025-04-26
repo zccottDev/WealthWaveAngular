@@ -1,63 +1,38 @@
+# 🌊 WealthWave
 
-# WealthWaveAngular
+> **WealthWave** is a modern expense tracker app built with **React**, **Vite**, and **TypeScript**. It helps users manage their finances with features like account tracking, budgeting, transaction management, and rich visual analytics.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+![WealthWave Logo](<!-- Update with actual logo path -->)
 
-## Development server
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🏠 Home Page
+- Displays **total balance** with a **burn graph** showing trends.
+- Lists **bank accounts and credit cards** with support for multiple accounts.
+- **Cash flow insights** with a **pie chart** for income vs. expenses.
+- Add and track multiple **budgets** with subcategories and dynamic progress.
 
-## Code scaffolding
+### 🗂 Categories
+- Add/manage **categories** and **subcategories**.
+- View a **pie chart** of spending per subcategory.
+- Apply filters: _All Time, This Year, This Month, This Week_.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 📊 Analytics
+- Visualize **current vs. previous month’s spending**.
+- Apply **time-based filters** for detailed breakdowns.
 
-```bash
-ng generate component component-name
-```
+### 💸 Transactions
+- Add, view, and manage **income, expenses, and transfers**.
+- **Filter** transactions by category, date, or type.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🎨 Theme Switching
+- Toggle **light/dark** themes from the top-right corner.
 
-```bash
-ng generate --help
-```
+### 📱 Responsive Design
+- Fully optimized for **mobile and desktop**.
+- **Bottom navigation bar** for easy access.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# WealthWaveAngular
-
+---
