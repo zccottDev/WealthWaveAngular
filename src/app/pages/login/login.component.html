@@ -1,1 +1,13 @@
-<p>login works!</p>
+<main>
+    <div class="loginContainer">
+        <h1>Login</h1>
+        <form class="loginForm" [formGroup]="loginForm">
+            <app-text-input controlName="username" label="Username" placeholder="Enter your username"
+                [formGroup]="loginForm"></app-text-input>
+            <app-password-input>
+
+            </app-password-input>
+            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        </form>
+    </div>
+</main>

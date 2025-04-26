@@ -1,0 +1,23 @@
+<mat-form-field appearance="outline" hideRequiredMarker>
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      [formControl]="control"
+      [placeholder]="placeholder"
+      aria-label="label"
+      (input)="onInputChange($event)"
+      (blur)="onBlur()"
+    />
+    <mat-icon
+      matSuffix
+      *ngIf="control.invalid && control.touched"
+    >
+      error
+    </mat-icon>
+    <mat-error *ngIf="control.hasError('required')">
+      {{ label }} is required
+    </mat-error>
+    <mat-error *ngIf="control.hasError('pattern')">
+        {{ label }} is invalid
+    </mat-error>
+  </mat-form-field>
