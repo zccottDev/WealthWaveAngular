@@ -1,0 +1,39 @@
+main{
+    width: 100dvw;
+    height: 100dvh;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        h1{
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
+        .loginForm{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blue;
+            flex-direction: column;
+            app-text-input{
+                width: 100%;
+                height: 100%;
+                max-width: 400px;
+                max-height: 50px;
+            }
+        }
+    }
+}
