@@ -1,13 +1,37 @@
 <main>
     <div class="loginContainer">
+        @if(isLogin){
         <h1>Login</h1>
+        }
+        @else{
+        <h1>Register</h1>
+        }
         <form class="loginForm" [formGroup]="loginForm">
             <app-text-input controlName="username" label="Username" placeholder="Enter your username"
                 [formGroup]="loginForm"></app-text-input>
-            <app-password-input>
-
-            </app-password-input>
-            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+            <app-password-input label="Password" controlName="password" placeholder="Enter your password"
+                [formGroup]="loginForm"></app-password-input>
+            @if(isLogin){
+            <button mat-fab extended [disabled]="!loginForm.valid">
+                Login
+            </button>
+            }
+            @else{
+            <button mat-fab extended [disabled]="!loginForm.valid">
+                Register
+            </button>
+            }
         </form>
+
+        <div class="loginFooter">
+            @if(isLogin){
+            <p>Don't have an account?</p>
+            <a (click)="switchIsLogin()">Register</a>
+            }
+            @else{
+            <p>Already have an account?</p>
+            <a (click)="switchIsLogin()">Login</a>
+            }
+        </div>
     </div>
 </main>
