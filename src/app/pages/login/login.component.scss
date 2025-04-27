@@ -1,7 +1,6 @@
 main{
     width: 100dvw;
     height: 100dvh;
-    background: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,25 +13,39 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: red;
         h1{
             font-size: 2rem;
-            color: white;
+            color: var(--text-color);
             text-align: center;
         }
         .loginForm{
             width: 100%;
             height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
-            background: blue;
             flex-direction: column;
-            app-text-input{
+            app-text-input,app-password-input,button{
                 width: 100%;
                 height: 100%;
                 max-width: 400px;
                 max-height: 50px;
+            }
+        }
+        .loginFooter{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            a{
+                color: var(--text-color);
+                text-decoration: none;
+                font-size: 1rem;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

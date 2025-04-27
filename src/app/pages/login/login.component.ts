@@ -1,36 +1,36 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PasswordInputComponent } from 'src/app/components/password-input/password-input.component';
 import { TextInputComponent } from 'src/app/components/text-input/text-input.component';
+import { MeterialModule } from 'src/Meterial.Module';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, TextInputComponent, PasswordInputComponent],
+  imports: [ReactiveFormsModule, TextInputComponent, PasswordInputComponent, MeterialModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
 
   loginForm: FormGroup;
+  isLogin: boolean = true;
 
   constructor(
     private readonly fb: FormBuilder,
   ) {
     this.loginForm = this.fb.group({
-      username: [''],
-      password: [''],
+      username: ['',[Validators.required]],
+      password: ['',[
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+        ),
+      ],],
     });
   }
-
-  ngOnInit(): void {
-    // Initialize any data or perform actions when the component is loaded
-  }
-
-  onLogin(): void {
-    // Handle login logic here
-  }
-
-  onRegister(): void {
-    // Handle registration logic here
+  
+  switchIsLogin(): void {
+    this.isLogin = !this.isLogin;
   }
 }
