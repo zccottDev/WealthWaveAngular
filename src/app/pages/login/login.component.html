@@ -11,16 +11,13 @@
                 [formGroup]="loginForm"></app-text-input>
             <app-password-input label="Password" controlName="password" placeholder="Enter your password"
                 [formGroup]="loginForm"></app-password-input>
-            @if(isLogin){
-            <button mat-fab extended [disabled]="!loginForm.valid">
-                Login
+            <button mat-fab (click)="onSubmit()" extended [disabled]="!loginForm.valid">
+                @if(isLogin){
+                    Login
+                }@else{
+                    Register
+                }
             </button>
-            }
-            @else{
-            <button mat-fab extended [disabled]="!loginForm.valid">
-                Register
-            </button>
-            }
         </form>
 
         <div class="loginFooter">

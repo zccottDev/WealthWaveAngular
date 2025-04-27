@@ -29,8 +29,28 @@ export class LoginComponent {
       ],],
     });
   }
-  
+
   switchIsLogin(): void {
     this.isLogin = !this.isLogin;
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      if(this.isLogin){
+        this.onLogin();
+      }
+      else{
+        this.onRegister();
+      }
+    } else {
+      this.loginForm.markAllAsTouched(); 
+    }
+  }
+
+  onLogin(): void {
+    console.log('Login', this.loginForm.value);
+  }
+  onRegister(): void {
+    console.log('Register', this.loginForm.value);
   }
 }
